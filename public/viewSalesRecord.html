@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Sales Record</title>
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css\viewSalesStyles.css"/>
+    <script type="text/javascript" src="js\lib\angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="viewSalesRecordController">
+    <div class="container" >
+        <div class="page-header">
+            SALES RECORD
+        </div>
+        <div class="content-area">
+            <div class="search-area">
+                <input type="date" id ="search-box"class="form-control" >
+            </div>
+            <div class="table-contents">
+                <table class="table">
+                    <thead>
+                        <td>#</td>
+                        <td>Mtn Quantity</td>
+                        <td>Glo Quantity</td>
+                        <td>Airtel Quantity</td>
+                        <td>Mtn Quantity</td>
+                        <td>Date</td>
+                    </thead>
+                    <tbody id='tableBody'>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Stock Record</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/salestyles.css">
+    <link rel="stylesheet" href="fonts\font-awesome-4.7.0\css\font-awesome.css">
+    <script type="text/javascript" src="js\lib\angular.min.js"></script>
+    <script type="text/javascript" src="js\lib\angular.route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <title>Document</title>
+</head>
+<body ng-controller="stockRecordController">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <b>e</b>azy
+                            <b>r</b>ecord</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav navbar-links">
+                            <li class="active">
+                                <a href="#">Main</a>
+                            </li>
+                            <li>
+                                <a href="#!/sim">Sim</a>
+                            </li>
+                            <li>
+                                <a href="#!/battery">Battery</a>
+                            </li>
+                            <li>
+                                <a href="#!/phones">Phone</a>
+                            </li>
+                            <li>
+                                <a href="#!/chargers">Chargers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container con-body" ng-view>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a specific product..">
+            </div>
+    
+</body>
+</html>

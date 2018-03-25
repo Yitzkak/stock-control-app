@@ -1,0 +1,83 @@
+html,body{
+    padding: 0px;
+    margin: 0px;
+}
+.con-body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    width: 90%;
+    min-height: 661px; 
+    margin-top: 80px;
+   /* border: 1px solid #444;*/
+}
+.custom-container{
+    margin-top: 48px;
+}
+.navbar{
+    background-color: #333;
+    color: white;
+    height: 51px;
+}
+.navbar-links{
+    margin-left: 100px;
+}
+
+#myInput {
+    /*background-image: url('/css/searchicon.png');  Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+.stock-input{
+    width: 19.45%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 8px 20px 8px 40px; /* Add some padding */
+    margin-bottom: 12px;
+}
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+    cursor: pointer;
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 5px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+    cursor: pointer;
+}
+
+#myTable tr::selection {
+    background-color: #333;
+}
+
+#myTable td,tfoot {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+tfoot{
+    font-weight: 900;
+}
+
+
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+.product-table{
+    margin-top: 20px;
+}

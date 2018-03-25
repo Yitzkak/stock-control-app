@@ -1,0 +1,26 @@
+<div class="date-place" style="font-size:25px;color:rgb(41, 41, 41);font-style:italic;font-family:Courier New, Courier, monospace">
+    <p style="text-align:right" id="date-place">{{showDate}}</p>
+</div>
+
+<input type="date" id="myInput" onkeyup="myFunction()" placeholder="Search for a specific date..">
+
+<table id="myTable" at-table at-paginated at-list="list" at-config="config">
+    <tr class="header">
+        <th style="width:30%;">Product</th>
+        <th style="width:25%">Model</th>
+        <th style="width:20%">Qty Sold</th>
+        <th style="width:25%">Total Price</th>  
+    </tr>
+    <tr ng-repeat = 'report in dailySalesReport'>
+        <td>{{report.brand}}</td>
+        <td>{{report.model}}</td>
+        <td>{{report.qty}}</td>
+        <td>{{report.price}}</td>
+    </tr>
+    <tfoot>
+        <td>Grand Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tfoot>
+</table>

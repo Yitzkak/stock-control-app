@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="css\bootstrap.css"><!--used to ensure that the page renders well 
+    prioritises bootsrap for this particular page-->
+    
+<div class="container con-body"> <!-- used to center the content -->
+<div class="add-item-container">
+    <input type="text" id="my-input1" class="stock-input si-1" placeholder="enter product brand..." ng-model="soldBrand" />
+    <input type="text" id="my-input2" class="stock-input si-2" placeholder="Model" ng-model="soldModel" />
+    <input type="text" id="my-input3" class="stock-input si-3" placeholder="Quantity" ng-model="soldQty" />
+    <input type="text" id="my-input4" class="stock-input si-4" placeholder="Price" ng-model="soldPrice"/>
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" ng-click="addDailySalesRecordForBattery()" class="btn btn-success">add</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary product-table">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Product: Battery</div>
+  
+    <!-- Table -->
+    <table class="table">
+      <thead>
+            <td>Brand</td>
+            <td>Model</td>
+            <td>Qty</td>
+            <td>Price</td>
+            <td style="text-align:center">Action</td>
+      </thead>
+      <tr ng-repeat="report in batteryReportScope | orderBy:'brand'">
+        <td>{{report.brand}}</td>
+        <td>{{report.model}}</td>
+        <td>{{report.qty}}</td>
+        <td>{{report.price}}</td>
+        <td style="text-align:center">
+            <button class="btn btn-danger" style="background-color:white;border-color:transparent;" ng-click="batteryDeleteRecord(product)"><i class="fa fa-times " style="color:rgb(218, 19, 19);"></i></button>
+            <button class="btn btn-danger" style="background-color:white;border-color:transparent;" ng-click="batteryUpdateRecord(product)"><i class="fa fa-pencil " style="color:rgb(48, 39, 39);"></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

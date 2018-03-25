@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/salestyles.css">
+    <script type="text/javascript" src="js\lib\angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-controller="viewSalesRecordController">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <b>e</b>azy
+                    <b>r</b>ecord</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-links">
+                    <li class="active">
+                        <a href="#">Main</a>
+                    </li>
+                    <li>
+                        <a href="#">Sim</a>
+                    </li>
+                    <li>
+                        <a href="#">Battery</a>
+                    </li>
+                    <li>
+                        <a href="#">Phone</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container con-body">
+
+        <div class="date-place" style="font-size:25px;color:rgb(41, 41, 41);font-style:italic;font-family:Courier New, Courier, monospace">
+            <p style="text-align:right" id="date-place">Wed 21 Jan 2018</p>
+        </div>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a specific date..">
+
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:30%;">Product</th>
+                <th style="width:20%">Qty Sold</th>
+                <th style="width:25%">Total</th>
+                <th style="width:25%">Gain</th>
+            </tr>
+            <tr>
+                <td>Mtn Sim</td>
+                <td>12</td>
+                <td>3600</td>
+                <td>3200</td>
+            </tr>
+            <tr>
+                <td>Etisalat Sim</td>
+                <td>5</td>
+                <td>1500</td>
+                <td>1400</td>
+            </tr>
+            <tr>
+                <td>Airtel Sim</td>
+                <td>10</td>
+                <td>3000</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>Glo Sim</td>
+                <td>3</td>
+                <td>900</td>
+                <td>660</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Sales Record</title>
+    <script type="text/javascript" src="js\lib\angular.min.js"></script>
+    <script type="text/javascript" src="js\lib\angular.route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css\styles.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts\font-awesome-4.7.0\css\font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css\materialize.css">
+    <link rel="stylesheet" href="css\salesStyles.css">
+</head>
+<body>
+    <div class="custom-container" ng-controller="addSalesController">
+            <div class="my-container">
+                    <div class="content">
+            
+                        <!-- Box One-->
+                        <div class="box-submit">
+                            <button class="btn btn-success" ng-click="addSalesRecord()">Submit Sales Record</button>
+                        </div>
+                        <div class="boxes box-header">
+                            SIM CARD
+                        </div>
+                        <div class="boxes" ng-repeat="simcard in simcards">
+                            <div class="box-partition-1">
+                                {{simcard.qty}}
+                            </div>
+                            <div class="box-partition-2">
+                                <div class="box-content">
+                                    <div class="product-name">
+                                        {{simcard.name}} sim
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="box-partition-3">
+                                <div class="frm-component-container">
+                                    <button ng-click="getAddBtn(simcard)" class="btn btn-primary">+</button>
+                                </div>
+            
+                                <div class="divider"></div>
+            
+                                <div class="frm-component-container">
+                                    <button ng-click="getSubBtn(simcard)" class="btn btn-danger red">-</button>
+                                </div>
+            
+                                <div class="divider"></div>
+                                        
+                                <div class="frm-component-container">
+                                    <input type="text" ng-model="simcard.unitPrice"/>
+                                </div>
+
+                                <div class="divider last-divider"></div>
+
+                                <div class="frm-component-container last-frm-component-container">
+                                    {{simcard.totalPrice}}
+                                </div>
+
+                                    
+                            </div>  
+                        </div>
+
+
+                        <!-- SIM SWAP RECORDS-->
+                        <div class="boxes box-header">
+                            SIM SWAP
+                        </div>
+                        <div class="boxes" ng-repeat="simswap in simswaps">
+                            <div class="box-partition-1">
+                                {{simswap.qty}}
+                            </div>
+                            <div class="box-partition-2">
+                                <div class="box-content">
+                                    <div class="product-name">
+                                        {{simswap.name}} swap
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="box-partition-3">
+                                <div class="frm-component-container">
+                                    <button ng-click="getSwapAddBtn(simswap)" class="btn btn-primary">+</button>
+                                </div>
+            
+                                <div class="divider"></div>
+            
+                                <div class="frm-component-container">
+                                    <button ng-click="getSwapSubBtn(simswap)" class="btn btn-danger red">-</button>
+                                </div>
+            
+                                <div class="divider"></div>
+                                        
+                                <div class="frm-component-container">
+                                    <input type="text" ng-model="simswap.unitPrice"/>
+                                </div>
+
+                                <div class="divider last-divider"></div>
+                               
+                                <div class="frm-component-container last-frm-component-container">
+                                    {{simswap.totalPrice}}
+                                </div>
+                                    
+                            </div>  
+
+                            
+                        </div>
+
+                        <!-- Box two--><!--
+                        <div class="boxes">
+                            <div class="box-partition-1">
+                                0
+                            </div>
+                            <div class="box-partition-2">
+                                <div class="box-content">
+                                    <div class="product-name">
+                                        Glo sim
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="box-partition-3">
+                                <div class="frm-component-container">
+                                    <input ng-click="getAddBtn()" type="button" value="+" class="btn btn-primary"/>
+                                </div>
+            
+                                <div class="divider"></div>
+            
+                                <div class="frm-component-container">
+                                    <button ng-click="getSubBtn()" type="button" class="btn btn-danger red">-</button>
+                                </div>
+            
+                                <div class="divider"></div>
+                                        
+                                <div class="frm-component-container">
+                                    <input type="text" ng-model="simQty.glo"/>
+                                </div>
+                                    
+                            </div>  
+                        </div>-->
+                        
+                        <!-- Box Three--><!--
+                        <div class="boxes">
+                                <div class="box-partition-1">
+                                        0
+                                    </div>
+                                    <div class="box-partition-2">
+                                        <div class="box-content">
+                                            <div class="product-name">
+                                                Airtel sim
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="box-partition-3">
+                                        <div class="frm-component-container">
+                                            <button ng-click="getAddBtn()" class="btn btn-primary">+</button>
+                                        </div>
+                    
+                                        <div class="divider"></div>
+                    
+                                        <div class="frm-component-container">
+                                            <button ng-click="getSubBtn()" class="btn btn-danger red">-</button>
+                                        </div>
+                    
+                                        <div class="divider"></div>
+                                                
+                                        <div class="frm-component-container">
+                                            <input type="text" ng-model="simQty.airtel"/>
+                                        </div>
+                                            
+                                    </div>  
+                        </div>-->
+            
+                        <!-- Box four--><!--
+                        <div class="boxes">
+                                <div class="box-partition-1">
+                                        0
+                                    </div>
+                                    <div class="box-partition-2">
+                                        <div class="box-content">
+                                            <div class="product-name">
+                                                Etisalat sim
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="box-partition-3">
+                                        <div class="frm-component-container">
+                                            <button ng-click="getAddBtn()" class="btn btn-primary">+</button>
+                                        </div>
+                    
+                                        <div class="divider"></div>
+                    
+                                        <div class="frm-component-container">
+                                            <button ng-click="getSubBtn()" class="btn btn-danger red">-</button>
+                                        </div>
+                    
+                                        <div class="divider"></div>
+                                                
+                                        <div class="frm-component-container">
+                                            <input type="text" ng-model="simQty.etisalat"/>
+                                        </div>
+                                            
+                                    </div>  
+                        </div>-->
+            
+                        
+                        
+                    </div>
+        </div>
+    </div>
+</body>
+</html>

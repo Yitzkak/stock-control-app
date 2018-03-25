@@ -1,0 +1,36 @@
+<div class="add-item-container">
+    <input type="text" class="stock-input si-1" placeholder="enter product brand..." ng-model="brand" />
+    <input type="text" class="stock-input si-2" placeholder="Description" ng-model="description" />
+    <input type="text" class="stock-input si-3" placeholder="Quantity" ng-model="qty" />
+    <input type="text" class="stock-input si-4" placeholder="Price" ng-model="price"/>
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" ng-click="addNewSim()" class="btn btn-success">add</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary product-table">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Product: Sim</div>
+  
+    <!-- Table -->
+    <table class="table" id="myTable">
+      <thead>
+            <td>Brand</td>
+            <td>Description</td>
+            <td>Qty</td>
+            <td>Price</td>
+            <td style="text-align:center">Action</td>
+      </thead>
+      <tr ng-repeat="product in productSim | orderBy:'brand'" >
+        <td>{{product.brand}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.qty}}</td>
+        <td>{{product.price}}</td>
+        <td style="text-align:center">
+            <button class="btn btn-danger" style="background-color:white;border-color:transparent;" ng-click="simDeleteRecord(product)"><i class="fa fa-times " style="color:rgb(218, 19, 19);"></i></button>
+            <button class="btn btn-danger" style="background-color:white;border-color:transparent;" ng-click="simUpdateRecord(product)"><i class="fa fa-pencil " style="color:rgb(48, 39, 39);"></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>

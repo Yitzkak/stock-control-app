@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Sales Record</title>
+    <script type="text/javascript" src="js\lib\angular.min.js"></script>
+    <script type="text/javascript" src="js\lib\angular.route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts\font-awesome-4.7.0\css\font-awesome.css">
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css\materialize.css">
+    <link rel="stylesheet" href="css\salesStyles.css"> 
+    <link rel="stylesheet" href="css\salestyles.css"> 
+    <link rel="stylesheet" href="css\styles.css"> 
+</head>
+
+<body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div style="width:70%" class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <b>e</b>azy
+                        <b>r</b>ecord
+                    </a>
+                </div>
+                <div>
+                    <ul style='margin-left:100px' class="nav navbar-nav navbar-links">
+                        <li class="active">
+                            <a href="#">Main</a>
+                        </li>
+                        <li>
+                            <a href="#!/salesim">Sim</a>
+                        </li>
+                        <li>
+                            <a href="#!/salebattery">Battery</a>
+                        </li>
+                        <li>
+                            <a href="#!/salephone">Phone</a>
+                        </li>
+                        <li>
+                            <a href="#!/salecharger">Chargers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--- MAIN BODY CONTENT -->
+        <div  class="sale-record-body" ng-controller="addSalesController" ng-view>
+            
+        </div>     
+</body>
+
+</html>

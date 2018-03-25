@@ -1,0 +1,95 @@
+<!-- Box One-->
+ <div class="custom-container">
+        <div class="my-container">
+                <div class="content">
+                        <div class="boxes box-header">
+                                SIM CARD
+                            </div>
+                            <div class="boxes" ng-repeat="simcard in simcards">
+                                <div class="box-partition-1">
+                                    {{simcard.qty}}
+                                </div>
+                                <div class="box-partition-2">
+                                    <div class="box-content">
+                                        <div class="product-name">
+                                            {{simcard.name}} sim
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="box-partition-3">
+                                    <div class="frm-component-container">
+                                        <button ng-click="getAddBtn(simcard)" class="btn btn-primary">+</button>
+                                    </div>
+                            
+                                    <div class="divider"></div>
+                            
+                                    <div class="frm-component-container">
+                                        <button ng-click="getSubBtn(simcard)" class="btn btn-danger red">-</button>
+                                    </div>
+                            
+                                    <div class="divider"></div>
+                                            
+                                    <div class="frm-component-container">
+                                        <input type="text" ng-model="simcard.unitPrice"/>
+                                    </div>
+                            
+                                    <div class="divider last-divider"></div>
+                            
+                                    <div class="frm-component-container last-frm-component-container">
+                                        {{simcard.totalPrice}}
+                                    </div>     
+                                </div>  
+                            </div>
+                            
+                            
+                            <!-- SIM SWAP RECORDS-->
+                            <div class="boxes box-header">
+                                SIM SWAP
+                            </div>
+                            <div class="boxes" ng-repeat="simswap in simswaps">
+                                <div class="box-partition-1">
+                                    {{simswap.qty}}
+                                </div>
+                                <div class="box-partition-2">
+                                    <div class="box-content">
+                                        <div class="product-name">
+                                            {{simswap.name}} swap
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="box-partition-3">
+                                    <div class="frm-component-container">
+                                        <button ng-click="getSwapAddBtn(simswap)" class="btn btn-primary">+</button>
+                                    </div>
+                            
+                                    <div class="divider"></div>
+                            
+                                    <div class="frm-component-container">
+                                        <button ng-click="getSwapSubBtn(simswap)" class="btn btn-danger red">-</button>
+                                    </div>
+                            
+                                    <div class="divider"></div>
+                                            
+                                    <div class="frm-component-container">
+                                        <input type="text" ng-model="simswap.unitPrice"/>
+                                    </div>
+                            
+                                    <div class="divider last-divider"></div>
+                                   
+                                    <div class="frm-component-container last-frm-component-container">
+                                        {{simswap.totalPrice}}
+                                    </div>
+                                        
+                                </div>  
+                            </div>
+                            
+                            
+                            <div class="box-submit">
+                                <button class="btn btn-success" ng-click="addSalesRecord(simcard,simswap)">Submit Sales Record</button>
+                            </div>
+                            </div>
+                </div>
+         </div>
+ </div>                       

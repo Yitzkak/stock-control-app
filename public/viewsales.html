@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <script type="text/javascript" src="js\lib\angular.min.js"></script>
+    <script type="text/javascript" src="js\lib\angular.route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/salestyles.css">
+   
+    <title>View Daily Sales Report</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <b>e</b>azy
+                    <b>r</b>ecord</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-links">
+                    <li class="active">
+                        <a href="#">Main</a>
+                    </li>
+                    <li>
+                        <a href="#!/daily">Daily</a>
+                    </li>
+                    <li>
+                        <a href="#!/simreport">Sim Sales Report</a>
+                    </li>
+                    <li>
+                        <a href="#">Phone</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container con-body" ng-controller="showDailySalesReportController" ng-view>
+          
+        
+        
+    </div>
+</body>
+</html>

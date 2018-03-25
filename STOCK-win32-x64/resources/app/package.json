@@ -1,0 +1,25 @@
+{
+  "name": "stockcontrolapp",
+  "version": "1.0.0",
+  "description": "Stock control app for inventory management",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package":"",
+    "build":"electron-packager . STOCK CONTROL SYSTEM"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "asar": "^0.14.0",
+    "electron": "1.7.9",
+    "electron-packager": "^10.1.2",
+    "electron-reload": "^1.2.2"
+  },
+  "dependencies": {
+    "electron-reload": "^1.2.2",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.0-rc0",
+    "mongojs": "^2.4.1"
+  }
+}
